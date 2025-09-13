@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ozivel - Updates</title>
+<style>
+  * {margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif;}
+  body {background: radial-gradient(ellipse at bottom, #000 0%, #010101 100%); overflow-x: hidden;}
+  body::before {
+    content: "";
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    animation: starMove 200s linear infinite; z-index:0;
+  }
+  @keyframes starMove {0% {background-position:0 0;} 100% {background-position:10000px 10000px;}}
+  
+  nav {position: fixed; top:0; left:0; width:100%; background: rgba(0,0,0,0.8);
+       display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem;
+       z-index:100; backdrop-filter: blur(5px);}
+  nav .logo {font-size: 1.5rem; font-weight:bold; color:#FFD700;}
+  nav ul {display:flex; list-style:none;}
+  nav ul li {margin-left:2rem;}
+  nav ul li a {text-decoration:none; color:#fff; transition:0.3s;}
+  nav ul li a:hover {color:#FFD700;}
+
+  section {padding:6rem 2rem; max-width:1000px; margin:0 auto; position:relative; z-index:10;}
+  section h2 {font-size:2.2rem; color:#FFD700; margin-bottom:2rem; text-align:center;}
+
+  /* Cards container */
+  .pricing-cards {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;}
+
+  /* Card style */
+  .card {
+    background: rgba(30,30,30,0.9);
+    border: 2px solid #ffd700;
+    border-radius: 12px;
+    padding: 25px;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  .card:hover {transform: translateY(-10px); box-shadow:0 10px 20px rgba(255,215,0,0.4);}
+  .card h3 {font-size:1.5em; margin-bottom:15px; color:#ffd700;}
+  .card p, .card li {color:#8bc3ff; font-size:1em; line-height:1.5em;}
+  .card ul {text-align:left; padding-left:20px; margin:15px 0;}
+
+  .old-price span {text-decoration: line-through; color:#ff4c4c; font-weight:bold;}
+  .new-price {font-size:1.5em; font-weight:bold; color:#ffd700; margin:10px 0; animation:pulse 2s infinite;}
+  @keyframes pulse {0%,100%{transform:scale(1);}50%{transform:scale(1.05);}}
+
+  .btn-join {display:inline-block; padding:12px 25px; background:#ffd700; color:#000;
+        font-weight:bold; border-radius:8px; text-decoration:none; transition:all 0.3s ease;}
+  .btn-join:hover {background:#ffaa00;}
+  .spots-left {margin-top:10px; font-weight:bold; color:#ff4c4c; animation:blink 1.5s infinite;}
+  @keyframes blink {0%,50%,100%{opacity:1;}25%,75%{opacity:0.4;}}
+
+  footer {text-align:center; padding:3rem 2rem; color:#555;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Ozivel</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="test.html">Test</a></li>
+    <li><a href="update.html">Updates</a></li>
+  </ul>
+</nav>
+
+<section id="pricing">
+  <h2>Exclusive Early Access</h2>
+  <div class="pricing-cards">
+
+    <div class="card early-bird">
+      <h3>First 11 Members</h3>
+      <p class="old-price"><span>$97–$147 / month</span></p>
+      <p class="new-price">$23 / month</p>
+      <ul>
+        <li>Full VIP access to all channels</li>
+        <li>No upfront registration fee</li>
+        <li>All lessons & resources unlocked</li>
+        <li>Priority support & mentorship</li>
+      </ul>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScqplpbHqNHG8wT3I_p03U3MgV-D-K8tmgc4YHfI9yHYkbBoQ/viewform?usp=dialog" class="btn-join" target="_blank">Take the Test & Join Now</a>
+      <p class="spots-left">🔥 Only <span>4</span> spots left!</p>
+    </div>
+
+    <div class="card regular">
+      <h3>Regular Membership</h3>
+      <p class="price">$97–$147 / month</p>
+      <ul>
+        <li>Full access to all channels after entry fee</li>
+        <li>Monthly subscription: $27–$47</li>
+        <li>All lessons & updates</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Ozivel. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ozivel</title>
+<style>
+  * {margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif;}
+  body {background: radial-gradient(ellipse at bottom, #000 0%, #010101 100%); overflow-x: hidden;}
+  body::before {
+    content: "";
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    animation: starMove 200s linear infinite; z-index:0;
+  }
+  @keyframes starMove {0% {background-position:0 0;} 100% {background-position:10000px 10000px;}}
+
+  nav {position: fixed; top:0; left:0; width:100%; background: rgba(0,0,0,0.8);
+       display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem;
+       z-index:100; backdrop-filter: blur(5px);}
+  nav .logo {font-size: 1.5rem; font-weight:bold; color:#FFD700;}
+  nav ul {display:flex; list-style:none;}
+  nav ul li {margin-left:2rem;}
+  nav ul li a {text-decoration:none; color:#fff; transition:0.3s;}
+  nav ul li a:hover {color:#FFD700;}
+
+  .hero {height:100vh; display:flex; flex-direction: column; justify-content:center; align-items:center;
+         text-align:center; padding:0 2rem; position:relative; z-index:10;}
+  .hero-image {width:150px; height:auto; margin-bottom:1.5rem; filter: drop-shadow(0 0 10px #FFD700);}
+  .hero h1 {font-size:3rem; margin-bottom:1rem; color:#FFD700;}
+  .hero p {font-size:1.2rem; line-height:1.6; max-width:800px; color:#b270ff;}
+  .btn {padding:0.8rem 1.5rem; background:#FFD700; color:#000; text-decoration:none; font-weight:bold;
+        border-radius:5px; margin-top:1rem; display:inline-block; transition:0.3s; text-align:center;}
+  .btn:hover {background:#e6c200;}
+  
+  section {padding:5rem 2rem; max-width:1000px; margin:0 auto; position:relative; z-index:10;}
+  section h2 {font-size:2.2rem; color:#FFD700; margin-bottom:1rem;}
+  .card {background: rgba(20,20,20,0.8); border-left: 3px solid #FFD700; padding:1.5rem; margin-bottom:2rem;
+         border-radius:8px; box-shadow:0 0 15px rgba(255,215,0,0.1);}
+  .card h3 {font-size:1.5rem; color:#FFD700; margin-bottom:0.5rem;}
+  .card p {color:#b270ff; font-size:1.1rem; line-height:1.6;}
+  .blur-on-scroll {transition: filter 0.5s;}
+  
+  footer {text-align:center; padding:3rem 2rem; color:#555;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Ozivel</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="test.html">Test</a></li>
+    <li><a href="update.html">Updates</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <img src="images/falcon.png" alt="Falcon" class="hero-image" />
+  <h1 class="blur-on-scroll">Ozivel</h1>
+  <p class="blur-on-scroll">Not everyone will enter. This is for a select few — the men ready to master confidence, strategy, and life itself. Scroll down to discover the skills, mastery, and transformation inside. Are you ready to take the test and see if you belong?</p>
+  <a href="test.html" class="btn blur-on-scroll">Take the Test</a>
+</section>
+
+<section id="membership">
+  <h2>What You Will Learn</h2>
+  <div class="card">
+    <h3>Confidence</h3>
+    <p>Deep voice, body language mastery, scripts for every situation, winning arguments, remaining calm, and impressing anyone — from authority figures to women. Project power naturally.</p>
+  </div>
+  <div class="card">
+    <h3>Polymath Knowledge</h3>
+    <p>Copywriting, sales, persuasion, ethical hacking, tech mastery, fast learning, movie and literature insights — skills that feel like magic to ordinary people.</p>
+  </div>
+  <div class="card">
+    <h3>Uniqueness & Deception</h3>
+    <p>Blend in when needed, stand out when required, master misdirection, and learn the subtle art of social camouflage.</p>
+  </div>
+  <div class="card">
+    <h3>Money, Business, & Aesthetics</h3>
+    <p>Wealth strategy, entrepreneurial tactics, personal style, color theory, and financial mastery — for men who want the world on their terms.</p>
+  </div>
+  <div class="card">
+    <h3>Self-Defense</h3>
+    <p>Physical protection, situational awareness, and strategic thinking to ensure you are never caught off-guard.</p>
+  </div>
+  <div class="card">
+    <h3>Excellence</h3>
+    <p>Pattern recognition, forecasting, behavioral analysis, microexpression reading, and environmental awareness. Learn to see what others miss and act decisively.</p>
+  </div>
+  <div class="card">
+    <h3>Attention</h3>
+    <p>Control perception, manage envy, look lucky, act vulnerable or powerful intentionally — mastering the social game.</p>
+  </div>
+  <div class="card">
+    <h3>History & Cases</h3>
+    <p>Political, criminal, and religious case studies to learn from mistakes and uncover hidden truths.</p>
+  </div>
+  <div class="card">
+    <h3>Daily Planner</h3>
+    <p>Structured deadlines, exercises, and actionable steps to ensure you implement, not just learn. Consistency is everything.</p>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Ozivel. All rights reserved.
+</footer>
+
+<script>
+  const blurElems = document.querySelectorAll('.blur-on-scroll');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    blurElems.forEach(el => {
+      let blur = Math.min(scrollY / 200, 10);
+      el.style.filter = `blur(${blur}px)`;
+      el.style.opacity = 1 - Math.min(scrollY / 400, 0.7);
+    });
+  });
+</script>
+
+</body>
+</html>

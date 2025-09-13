@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ozivel - Entrance Test</title>
+<style>
+  * {margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif;}
+  body {background: radial-gradient(ellipse at bottom, #000 0%, #010101 100%); overflow-x: hidden;}
+  body::before {
+    content: "";
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    animation: starMove 200s linear infinite; z-index:0;
+  }
+  @keyframes starMove {0% {background-position:0 0;} 100% {background-position:10000px 10000px;}}
+  
+  nav {position: fixed; top:0; left:0; width:100%; background: rgba(0,0,0,0.8);
+       display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem;
+       z-index:100; backdrop-filter: blur(5px);}
+  nav .logo {font-size: 1.5rem; font-weight:bold; color:#FFD700;}
+  nav ul {display:flex; list-style:none;}
+  nav ul li {margin-left:2rem;}
+  nav ul li a {text-decoration:none; color:#fff; transition:0.3s;}
+  nav ul li a:hover {color:#FFD700;}
+
+  section {padding:6rem 2rem; max-width:900px; margin:0 auto; position:relative; z-index:10;}
+  section h1, section h2 {text-align:center; color:#FFD700;}
+  section h1 {font-size:3rem; margin-bottom:1rem;}
+  section h2 {font-size:2.2rem; margin-bottom:1rem;}
+  section p {font-size:1.1rem; line-height:1.6; color:#b270ff; margin-bottom:2rem; text-align:center;}
+  .btn {padding:0.8rem 1.5rem; background:#FFD700; color:#000; text-decoration:none; font-weight:bold;
+        border-radius:5px; margin-top:1rem; display:inline-block; transition:0.3s; text-align:center;}
+  .btn:hover {background:#e6c200;}
+
+  footer {text-align:center; padding:3rem 2rem; color:#555;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Ozivel</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#test-info">Test</a></li>
+    <li><a href="update.html">Updates</a></li>
+  </ul>
+</nav>
+
+<section>
+  <h1>Entrance Test</h1>
+  <p>Passing this test is your first achievement. It shows you have the honesty, transparency, and dedication required to join our elite community. Only a few will pass — this is not a place for superficial gurus or shortcuts.</p>
+</section>
+
+<section id="test-info">
+  <h2>Why This Test Matters</h2>
+  <p>This test ensures that every member is serious, committed, and ready to improve themselves. Answer truthfully — your responses will determine access to the community. Only those who demonstrate integrity and dedication will receive instructions for payment and membership.</p>
+
+  <h2>Guidelines</h2>
+  <p>- Be honest and transparent.<br>
+     - This is for serious applicants only.<br>
+     - Passing the test will grant access to exclusive resources, mentorship, and your transformation journey.<br>
+     - Failing the test means waiting, learning, and preparing for the next opportunity.</p>
+
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScqplpbHqNHG8wT3I_p03U3MgV-D-K8tmgc4YHfI9yHYkbBoQ/viewform?usp=dialog" target="_blank" class="btn">Start the Test</a>
+</section>
+
+<footer>
+  &copy; 2025 Ozivel. All rights reserved.
+</footer>
+
+</body>
+</html>
